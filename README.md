@@ -1,7 +1,7 @@
 # Audio recognizer
 
 ## How to run
-Run python script main.py from Code folder. **Test** folder contains test cases. Folders **DogBarking** and **CarHornVoice** contain a false test cases. 
+Run python script **main.py** from Code folder. **Test** folder contains test cases. Folders **DogBarking** and **CarHornVoice** contain a false test cases. 
 
 ## Idea
 The input is an audio clip of 5 seconds. If the audio is shorter than 5 seconds, we extend it to 5 seconds. If the audio is longer than 5 seconds, we trim it down to 5 seconds. Each second is represented by 16,000 samples (16kHz), which is a usually used sampling rate in audio processing. The audio is then represented using the Mel scale. The Mel scale is a perceptual scale of pitches judged by listeners to be equal in distance from one another. The reference point between this scale and the normal frequency measurement is defined by equating a 1000 Hz tone, 40 dB above the listener's threshold, with a pitch of 1000 mels. Using Short-Time Fourier Transform (STFT), we create a spectrogram, and then apply a Mel filter bank to convert it into a Mel spectrogram.
